@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap');
+
+:root {
+    --color-background: #f6f6f9;
+    --color-background2: white;
+    --color-br-green: #16B81B;
+    --color-dark: #606060;
+    --color-active-bg: #E1EDE1;
+    --color-active-indicator: #0B8C07;
+    --color-alert-red: #C91C1C;
+
+    --border-radius-primary: 0.8rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    appearance: none;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: poppins, sans-serif;
+    font-size: 0.88rem;
+    background-color: var(--color-background);
+    overflow-x: hidden;
+}
+
+.container {
+    display: grid;
+    width: 96%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 17rem auto;
+}
+
+a {
+    color: var(--color-dark);
+}
+
+aside {
+    height: 100vh;
+}
+
+aside .top {
+    margin-top: 2rem;
+    padding: 0.4rem;
+}
+
+aside .logo {
+    padding: 0.5rem;
+}
+
+aside .logo img {
+    width: 5rem;
+    height: 5rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.2rem;
+}
+
+aside .logo-lbl {
+    display: flex;
+    justify-content: space-between;
+}
+
+aside .logo h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+aside .logo h2 span {
+    color: var(--color-br-green);
+}
+
+aside .close {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: #16B81B;
+    text-align: right;
+    display: none;
+}
+
+
+aside .sidebar {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 3rem;
+    height: 86vh;
+}
+
+aside .sidebar div.sd-nav-item {
+    display: flex;
+    margin-left: 1rem;
+    gap: 1.8rem;
+    height: 3.7rem;
+    color: var(--color-dark);
+    align-items: center;
+    position: relative;
+    transition: all 100ms ease;
+    cursor: pointer;
+}
+
+aside .sidebar div.sd-nav-item:hover {
+    color: var(--color-active-indicator);
+}
+
+aside .sidebar div.sd-nav-item span {
+    font-size: 1.2rem;
+    transition: all 300ms ease; 
+}
+
+aside .sidebar div.sd-nav-item:last-child {
+    position: absolute;
+    bottom: 7rem;
+    width: 100%;
+}
+
+aside .sidebar div.sd-nav-item.active {
+    background-color: var(--color-active-bg);
+    margin-left: 0;
+    margin-right: 0rem;
+    border-radius: 0 var(--border-radius-primary) var(--border-radius-primary) 0;
+    color: var(--color-active-indicator);
+}
+
+aside .sidebar div.sd-nav-item.active::before {
+    content: "";
+    background-color: var(--color-active-indicator);
+    width: 10px;
+    height: 100%;
+}
+
+aside .sidebar div.sd-nav-item.active span.icon {
+    margin-left: -8px
+}
+
+aside .sidebar div.sd-nav-item span.count {
+    text-align: center;
+    width: 2rem;
+    color: white;
+    padding: 0rem 0.4rem;
+    border-radius: var(--border-radius-primary);
+    background-color: var(--color-alert-red);
+    font-size: 1rem;
+}
+
+aside .sidebar div.sd-nav-item:hover span.icon {
+    margin-left: 0.5rem;
+}
+
+aside h3 { 
+    font-weight: 500;
+}
+
+/* ============== MAIN ============== */
+main div.container {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+main div.container div.request-section {
+    background-color: var(--color-br-green);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+main div.container div.approval-section {
+    background-color: var(--color-alert-red);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+main div.container div.create-section {
+    background-color: var(--color-dark);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+main div.container div.settings-section {
+    background-color: var(--color-active-indicator);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+/* =============== MEDIA QUERIES =============== */
+@media screen and (max-width: 480px) {
+    body {
+        background-color: aquamarine;
+    }
+
+    .container {
+        grid-template-columns: auto;
+    }
+    
+    aside {
+        display: none;
+    }
+}

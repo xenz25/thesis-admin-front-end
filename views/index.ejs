@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Admin Dashboard</title>
+
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <aside>
+            <!-- TOP SIDE BAR-->
+            <div class="top">
+                <div class="close" id="close-btn">
+                    <span class="material-icons-round">close</span>
+                </div>
+                <div class="logo">
+                    <img src="./img/sanpedro_logo.png" alt="logo"">
+                    <h2>SAN<span>PEDRO</span></h2>
+                </div>
+            </div>
+            <!-- SIDE BAR NAV -->
+            <div class=" sidebar" id="side-nav">
+                    <div class="sd-nav-item active" id="sd-request">
+                        <span class=" material-icons-outlined icon">description</span>
+                        <h3 data-link>Request</h3>
+                        <span class="req-count count">5</span>
+                    </div>
+                    <div class="sd-nav-item" id="sd-approval">
+                        <span class=" material-icons-outlined icon">person_add</span>
+                        <h3 data-link>Approvals</h3>
+                        <span class="approv-count count">1</span>
+                    </div>
+                    <div class="sd-nav-item" id="sd-create">
+                        <span class=" material-icons-outlined icon">add</span>
+                        <h3 data-link>Create</h3>
+                    </div>
+                    <br><br>
+                    <div class="sd-nav-item" id="sd-settings">
+                        <span class="material-icons-outlined icon">settings</span>
+                        <h3 data-link>Settings</h3>
+                    </div>
+                    <div class="sd-nav-item" id="sd-logout">
+                        <span class="material-icons-outlined icon">logout</span>
+                        <h3 data-link>Logout</h3>
+                    </div>
+                </div>
+        </aside>
+
+        <main>
+            <div class="container"></div>
+        </main>
+    </div>
+
+    <script type="text/javascript" charset="utf-8" src="../src/index.js"></script>
+</body>
+
+</html>
